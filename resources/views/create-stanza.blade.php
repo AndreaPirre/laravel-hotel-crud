@@ -32,6 +32,9 @@
 
         </div>
 
+        <br>
+        <br>  
+
         <button type="submit" name="button">CREA NUOVA CONFIGURAZIONE</button>
     </form>
 
