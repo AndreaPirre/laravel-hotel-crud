@@ -26,6 +26,13 @@
     <a href="{{ route('stanze-index')}}">
         STANZE
     </a>
+
+    <br>
+    <br>
+
+    <a href="{{ route('pagamenti.index')}}">
+        PAGAMENTI
+    </a>
     </h1>
 
 @endsection

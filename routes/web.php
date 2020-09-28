@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function() { return view('home'); }) -> name('home');
+Route::get('/home', function() { return view('home'); }) -> name('home');
 
 Route::get('/paganti', 'PaganteController@index') -> name('paganti-index');
 
@@ -43,3 +43,9 @@ Route::get('/stanza/{id}', 'StanzaController@show') -> name('stanze-show');
 Route::get('/create/stanza', 'StanzaController@create') -> name('stanze-create');
 
 Route::post('/crate/stanza', 'StanzaController@store') -> name('stanze-store');
+
+// pagamenti
+
+Route::get('/', 'PagamentoController@index') -> name('pagamenti.index');
+
+Route::get('/pagamento/delete/{id}', 'PagamentoController@destroy') -> name('pagamento.destroy');
