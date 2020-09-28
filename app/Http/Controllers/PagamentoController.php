@@ -21,4 +21,20 @@ class PagamentoController extends Controller
 
         return redirect() -> route('pagamenti.index');
     }
+    public function edit($id) {
+
+        $pagamento = Pagamento::findOrFail($id);
+        return view('pagamento-edit', compact('pagamento'));
+
+    }
+
+    public function update(Request $request, $id) {
+
+        $data = $request -> all();
+        $pagamento = Pagamento::findOrFail($id);
+        $pagamento -> update($data);
+
+        return redirect() -> route('pagamenti.index');
+
+    }
 }

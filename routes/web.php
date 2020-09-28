@@ -49,3 +49,7 @@ Route::post('/crate/stanza', 'StanzaController@store') -> name('stanze-store');
 Route::get('/', 'PagamentoController@index') -> name('pagamenti.index');
 
 Route::get('/pagamento/delete/{id}', 'PagamentoController@destroy') -> name('pagamento.destroy');
+
+Route::get('/pagamento/edit/{id}', 'PagamentoController@edit') -> name('pagamento.edit');
+
+Route::post('/pagamento/update/{id}', 'PagamentoController@update') -> name('pagamento.update');
